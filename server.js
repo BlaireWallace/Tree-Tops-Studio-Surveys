@@ -199,10 +199,10 @@ app.post("/users/requestCodeConfirmation", async (req, res) => {
 app.post("/users/testConformationCode", async (req, res) => {
     const users = getUsers();
     const code = parseInt(req.body.data.code);
-    const parcelUsername = req.body.data.name;
+    const parcelUsername = req.body.data.name || req.body.data.username;
     let parcelEmail = req.body.data.email;
     const isNewUser = req.body.data.newUser;
-    const user = users.find((user) => user.name === parcelUsername || user.email === parcelUsername);
+    const user = users.find((user) => user.email === parcelUsername || user.email === parcelEmail);
     if (isNewUser) {
         // missing credentials
         if (userExist(parcelEmail)){
