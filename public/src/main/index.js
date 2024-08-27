@@ -7,8 +7,8 @@ import * as localData from "../tools/localData.js"
 
 const buttonsList = {
     "home": "index.html",
-    "signin": "signin.html",
-    "signup": "signup.html",
+    "signin": "signIn.html",
+    "signup": "signUp.html",
     "logout": "index.html",
     "messages": "messages.html"
 }
