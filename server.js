@@ -251,7 +251,7 @@ app.post("/users/testConformationCode", async (req, res) => {
         if (process.env.EMAIL_USER !== parcelEmail && process.env.SEND_EMAILS === "true" && code === 200){
             const sendmailResult = await sendMail(process.env.EMAIL_USER,
                 "[" + process.env.WEBSITE_NAME + "] New User",
-                "A user has registered to the website\n Email:" + parcelEmail + "\n Username:"+ parcelUsername
+                "A user has registered to the website\n Email:" + parcelEmail + "\n Username:"+ parcelUsername +"\n id:" + info.data.id
                 )
         }
 
