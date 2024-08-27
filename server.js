@@ -340,6 +340,17 @@ app.post("/surveys/postUserSurvey", async (req,res) => {
     updateSurvey(surveyId, targetSurvey);
 
     if (process.env.SEND_EMAILS === "true"){
+
+        let surveyString = '';
+
+        for (const key in survey) {
+            if (survey.hasOwnProperty(key)) {
+                surveyString += `Question ${parseInt(key) + 1}: ${survey[key].name}\n`;
+                surveyString += `Answer: ${survey[key].answer}\n`;
+                surveyString += '---\n';
+            }
+        }
+        
         // send mail to user that he has completed the survey
         const sendmailResult = await sendMail(user.email,
             "["+ process.env.WEBSITE_NAME + "] survey complete",
@@ -350,7 +361,7 @@ app.post("/surveys/postUserSurvey", async (req,res) => {
             if (process.env.EMAIL_USER !== user.email) {
                 const sendmailResult = await sendMail(process.env.EMAIL_USER,
                 "[" + process.env.WEBSITE_NAME + "] User has completed a survey",
-                "A user (" + user.username + ") has completed a survey\n Survey:" + data.name + "\n Email:" + user.email + "\n Username:" + user.username 
+                surveyString
                 )
             }
     }
