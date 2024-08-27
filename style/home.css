@@ -1,0 +1,38 @@
+#surveys { 
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    height: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.QuizSelection {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    background: rgb(43, 192, 255);
+    border-radius: 25px;
+    width: 50%; /* this will be remotely programed */
+    height: 35vh;
+    margin: 10px;
+}
+
+.QuizSelection p2 { /* Survey Title */
+    background-color: rgb(43, 192, 255);
+    height: 25%;
+    width: 100%;
+    align-content: center;
+}
+
+.quizButton { /* Survey Button */
+    display: block;
+    width: 90%;
+    flex-shrink: 0;
+    margin: 5px auto;
+    height: fit-content;
+}
+
+#welcomeBackText {
+    text-align: center;
+}

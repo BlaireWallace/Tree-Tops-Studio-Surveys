@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/signUp.css">
+
+</head>
+<body>
+    <div id="waitScreen">
+        <h1>Wait</h1>
+        <p style="text-align: center;" id="warningText">Sending a one time code</p>
+    </div>
+    
+    <header>
+        <h1>Website title</h1>
+        <div>
+            <button id="home">Home</button>
+        </div>
+    </header>
+
+    <main>
+        <h2> Sign Up </h2>
+        <p id="transferSpanText">This is a transfer span text</p>
+        <form>
+            <p>Have an account? <a href="signIn.html">Sign In</a></p>
+            <span id="errorText">This is a error text</span>
+            <div id="signupForm"> 
+                <span>Username</span>
+                <input id="username" type="text" placeholder=""> </input>
+            </div>
+
+            <div id="signupForm"> 
+                <span>Email</span>
+                <input id="email" type="email" placeholder=""> </input>
+            </div>
+
+            <button id="resendCode">Resend Code</button>
+            <input type="text" id="confirmationCode" name="Confirmation Code" placeholder="Confirmation Code">
+            <button id="continueButton">Continue</button>
+            <button id="signUp">Sign Up</button>
+
+            <p id="expirationText">Code expires in x seconds</p>
+            <span id="spamTxt">Check your spam folder if you don't see it in your inbox.</span>
+        </form>
+    </main>
+
+    <footer>
+        <p>Questions/Suggestions? Email BlairWallace1119.code@gmail.com</p>
+    </footer>
+
+    <script type="module" src="./src/main/signUp.js"></script>
+    <script type="module" src="./src/main/index.js"></script>
+
+    <script>
+        <!-- Clone logic -->
+        function create(str){
+            const surveys = document.getElementById("surveys");
+            const serveyApplication = document.getElementById("QuizSelection");
+
+            const clone = serveyApplication.cloneNode(true);
+
+            clone.querySelector("p2").textContent = str;
+            surveys.appendChild(clone);
+        }
+
+        // create("In Progress");
+        // create("Completed Surveys");         
+    </script>
+</body>
+</html>

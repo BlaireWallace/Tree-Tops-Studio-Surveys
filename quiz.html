@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/quiz.css">
+</head>
+<body>
+    <div id="warningScreen">
+        <h1>Warning</h1>
+
+        <p style="text-align: center;" id="warningText">Do you want to leave this page? <br>Your progress will be saved to do later.  </p>
+
+        <div>
+            <button class="warningPromptButton" id="stayOnPage">No</button>
+            <button class="warningPromptButton" id="leavePage">Yes</button>
+        </div>
+    </div>
+    <div id="waitScreen">
+        <h1>Submitting Survey</h1>
+        <p style="text-align: center;" id="warningText">You will be redirected back to the home page after submission</p>
+    </div>
+    <header>
+        <h1>Website title</h1>
+        <p id="welcomeBackText">Welcome back "UserName"</p>
+        <div>
+            <button id="home">Home</button>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+
+    <h2 id="quizTitle" style="text-align: center"> Quiz Name </h2>
+
+    <div id="userProgressScreen">
+        <!-- 
+        Quiz Currently in progress
+        Survey Started on:
+         -->
+        <p style="color: white">In progress screen</p>
+    </div>
+
+    <main>
+        <div id="quizScreen">
+            <!-- Quiz types:
+             Multiple choice, open ended, multiple choice with open ended, least likely more likely
+            -->
+            
+            <form class = "response" id="question">
+                <p id="questionNotAnswered">Please answer this question</p>
+                <p class="questionNumber">1.</p>
+                <p class="questionPromt">
+                    Question Prompt goes here...
+                </p>
+
+                <input type="text" id="responseText" name="responseText" placeholder="Type here">
+            </form>
+
+            <form class = "radio" id="question">
+                <p id="questionNotAnswered">Please answer this question</p>
+                <p class="questionNumber">1.</p>
+                <p class="questionPromt">
+                    Question Prompt goes here...
+                </p>
+
+                <div id="questionContents">
+                    <label id="questionButton">
+                        <input type="radio" class="responseRadio" value="1">
+                        <label class="optionButton">Option 1</label>
+                    </label>
+                </div>
+                <input type="text" class="secretResponseText" id="responseText" name="secretResponseText" placeholder="Secret Response Text">
+            </form>
+
+            <form class = "checkbox" id="question">
+                <p id="questionNotAnswered">Please answer this question</p>
+                <p class="questionNumber">1.</p>
+                <p class="questionPromt">
+                    Question Prompt goes here...
+                </p>
+
+                <div id="questionContents">
+                    <label id="questionButton">
+                        <input type="checkbox" class="responseRadio" value="1">
+                        <label class="optionButton">Option 1</label>
+                    </label>
+                </div>
+            </form>
+
+
+            <form class="answeredResponse" id="question">
+                <p class="questionNumber">1.</p>
+                <p class="questionPromt">
+                    Question Prompt goes here...
+                </p>
+
+                <p id="responseText" name="responseText">Answered Question</p>
+            </form>
+
+            <div id="responseButtons">
+                <button id="finishlaterButton">Finish Later</button>
+                <button id="submitButton">Submit</button>
+                <button id="homeButton">Home</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Questions/Suggestions? Email BlairWallace1119.code@gmail.com</p>
+    </footer>
+
+    <script type="module" src="./src/main/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;   
+}
+
+#quizScreen {
+    width: 100%;
+    height: 100%;
+}
+
+#responseButtons {
+    margin-top: 15px;
+}
+
+#question > * {
+    padding: 0;
+    margin: 0;
+}
+
+#question {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 192, 255);
+    border-radius: 5px;
+    border: 5px solid rgb(43, 192, 255);
+    width: 90%;
+    min-height: 20%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.answeredResponse #responseText{
+    line-height: 3;
+}
+
+#userProgressScreen{
+    text-align: center;
+    line-height: 2;
+}
+
+.questionNumber{
+    width: fit-content;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.questionPromt{
+    text-align: center;
+    font-size: 1.25em;
+    width: 100%;
+    align-self: flex-start;
+}
+
+#responseText {
+    text-align: center;
+    border-radius: 25px;
+    margin-top: auto;
+}
+
+.secretResponseText {
+    /* display: none; */
+}
+
+#responseText::placeholder {
+    text-align: center;
+}
+
+/* Radio */
+#questionContents {
+    display: flex;
+    flex-direction: column;
+}
+
+#questionContents > * {
+    margin-right: auto;
+}
+
+#questionNotAnswered {
+    display: none;
+    justify-content: center;
+    color: red;
+    text-align: center;
+}
