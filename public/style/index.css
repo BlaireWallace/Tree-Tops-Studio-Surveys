@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #50e2ff;
+    margin: 0;
+    padding: 10px;
+}
+
+header, nav, main, footer {
+    /* width: 100%; */
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+p, p2, span, button, label {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1, h2{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    gap: 15%;
+}
+
+main {
+    min-height: 50vh;
+    height: fit-content;
+}
+
+footer {
+    /* position: absolute; */
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* bottom: 0; */
+}
+
+button {
+    background-color: #30c2d9;
+    border-radius: 25px;
+    /* border: 1px solid white; */
+    min-width: 20%;
+    width: fit-content;
+    height: 20px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(46, 239, 249);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.scrolling-frame {
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    overflow: auto;
+}
+
+.scrolling-frame div { /* contents */
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+#warningScreen, #waitScreen {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+#warningScreen div, #waitScreen div {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#warningScreen h1, #warningScreen p, #waitScreen h1, #waitScreen p {
+    color: white;
+}
+
+.warningPromptButton {
+
+}
+
+#transferSpanText {
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.inline {
+    display: inline;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
