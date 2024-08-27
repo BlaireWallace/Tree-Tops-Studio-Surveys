@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { getUser, sendMail, getDrafts, readMail } = require("./src/gmail_");
+const { getUser, sendMail, getDrafts, readMail } = require("./public/src/tools/gmail_");
 const { format, addMinutes, isAfter } = require("date-fns");
 const SendmailTransport = require('nodemailer/lib/sendmail-transport');
 require("dotenv").config();
